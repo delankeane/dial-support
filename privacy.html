@@ -5,101 +5,191 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Dial</title>
   <style>
+    :root {
+      --primary: #2A5F3F;
+      --primary-deep: #1F4D34;
+      --primary-light: #E8F0E4;
+      --accent: #E8A547;
+      --accent-text: #2A1808;
+      --background: #FBF9F2;
+      --surface: #FFFFFF;
+      --text-primary: #2A1808;
+      --text-secondary: #5C5249;
+      --text-tertiary: #88857E;
+      --border: rgba(42,24,8,0.08);
+    }
+
+    * { box-sizing: border-box; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Georgia, serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--text-primary);
+      background: var(--background);
+      line-height: 1.6;
+    }
+
+    .nav {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--surface);
+    }
+    .nav-inner {
       max-width: 720px;
       margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-      color: #2A1808;
-      background: #FBF9F2;
-      line-height: 1.55;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    .logo-row span {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: -0.3px;
+    }
+    .back-link {
+      color: var(--primary);
+      font-size: 0.9rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
     h1 {
       font-family: Georgia, serif;
-      font-size: 2rem;
-      margin-bottom: 0.25rem;
+      font-size: 2.25rem;
+      margin: 0 0 0.25rem;
       letter-spacing: -0.5px;
+      color: var(--text-primary);
     }
     .updated {
-      color: #88857E;
+      color: var(--text-tertiary);
       font-size: 0.85rem;
-      margin-bottom: 2rem;
+      margin: 0 0 2rem;
     }
+
+    .callout {
+      background: var(--primary-light);
+      border-left: 3px solid var(--primary);
+      padding: 1.25rem 1.5rem;
+      border-radius: 12px;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .callout strong { color: var(--primary-deep); }
+
     h2 {
       font-family: Georgia, serif;
-      font-size: 1.25rem;
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
-      color: #2A5F3F;
+      font-size: 1.4rem;
+      margin: 2.5rem 0 0.75rem;
+      color: var(--primary-deep);
+      letter-spacing: -0.3px;
     }
-    p { margin: 0.75rem 0; }
-    a { color: #2A5F3F; }
-    .callout {
-      background: #E8F0E4;
-      border-left: 3px solid #2A5F3F;
-      padding: 1rem 1.25rem;
-      border-radius: 8px;
-      margin: 1.5rem 0;
+
+    p { margin: 0.75rem 0; color: var(--text-secondary); }
+
+    ul {
+      padding-left: 1.25rem;
+      color: var(--text-secondary);
     }
+    li { margin: 0.4rem 0; }
+    li strong { color: var(--text-primary); }
+
+    a { color: var(--primary); }
+    a:hover { text-decoration: underline; }
+
     footer {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
       font-size: 0.85rem;
-      color: #88857E;
+      color: var(--text-tertiary);
+      border-top: 0.5px solid var(--border);
+      margin-top: 3rem;
     }
+    footer a { color: var(--primary); text-decoration: none; margin: 0 0.5rem; }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: April 24, 2026</p>
 
-  <div class="callout">
-    <strong>The short version:</strong> Dial stores everything you log — clubs, shots, rounds, courses, and your name and handedness — only on your device. We don't have a server. We don't collect, transmit, or sell any of your data. Ever.
-  </div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo-row" href="index.html">
+        <svg width="18" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 3 L6 22" stroke="#2A5F3F" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M6.5 4 L18 7.5 L6.5 11 Z" fill="#2A5F3F"/>
+          <circle cx="6" cy="22" r="1.4" fill="#2A5F3F"/>
+        </svg>
+        <span>Dial</span>
+      </a>
+      <a class="back-link" href="index.html">← Back to support</a>
+    </div>
+  </nav>
 
-  <h2>What data Dial stores</h2>
-  <p>When you use Dial, the app stores the following information <strong>locally on your device</strong>, in a private database that only Dial can access:</p>
-  <ul>
-    <li>Your first name and handedness, entered during onboarding</li>
-    <li>Your bag — clubs you've added, with optional brand, model, and loft</li>
-    <li>Shots you log — club used, yardage, result, direction, surface</li>
-    <li>Courses you save — name, location, par, hole count</li>
-    <li>Rounds you play — scores per hole, putts, shot history</li>
-  </ul>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: April 24, 2026</p>
 
-  <h2>What Dial does NOT do</h2>
-  <ul>
-    <li>No account creation. No email, no password, no sign-in.</li>
-    <li>No analytics. We don't track what you tap or how long you spend in the app.</li>
-    <li>No advertising. No third-party SDKs that collect data.</li>
-    <li>No cloud sync. Your data does not leave your phone.</li>
-    <li>No location tracking. Dial does not request or use your GPS location.</li>
-    <li>No data sharing with third parties. There are no third parties.</li>
-  </ul>
+    <div class="callout">
+      <strong>The short version:</strong><br/>
+      Dial stores everything you log — clubs, shots, rounds, courses, your name and handedness — only on your device. We don't have a server. We don't collect, transmit, or sell any of your data. Ever.
+    </div>
 
-  <h2>Your control over your data</h2>
-  <p>Because your data lives on your device:</p>
-  <ul>
-    <li><strong>You own it.</strong> It's physically on your phone.</li>
-    <li><strong>You can delete it at any time.</strong> Settings → Reset all data. Or delete the Dial app, which removes everything.</li>
-    <li><strong>It does not persist beyond your device.</strong> If you lose your phone or uninstall Dial, your data is gone. There is no backup unless you create one yourself.</li>
-  </ul>
+    <h2>What data Dial stores</h2>
+    <p>When you use Dial, the app stores the following information <strong>locally on your device</strong>, in a private database that only Dial can access:</p>
+    <ul>
+      <li>Your first name and handedness, entered during onboarding</li>
+      <li>Your bag — clubs you've added, with optional brand, model, and loft</li>
+      <li>Shots you log — club used, yardage, result, direction, surface</li>
+      <li>Courses you save — name, location, par, hole count</li>
+      <li>Rounds you play — scores per hole, putts, shot history</li>
+    </ul>
 
-  <h2>Children</h2>
-  <p>Dial is intended for adult and teen golfers. We do not knowingly collect data from children under 13 because we do not collect data from anyone.</p>
+    <h2>What Dial does NOT do</h2>
+    <ul>
+      <li>No account creation. No email, no password, no sign-in.</li>
+      <li>No analytics. We don't track what you tap or how long you spend in the app.</li>
+      <li>No advertising. No third-party SDKs that collect data.</li>
+      <li>No cloud sync. Your data does not leave your phone.</li>
+      <li>No location tracking. Dial does not request or use your GPS location.</li>
+      <li>No data sharing with third parties. There are no third parties.</li>
+    </ul>
 
-  <h2>Crash reports and diagnostics</h2>
-  <p>If your phone sends anonymous crash reports to Apple (a system-level setting you control in iOS Settings), Apple may share aggregated crash information with us. This data contains no personal information and is used only to fix bugs.</p>
+    <h2>Your control over your data</h2>
+    <p>Because your data lives on your device:</p>
+    <ul>
+      <li><strong>You own it.</strong> It's physically on your phone.</li>
+      <li><strong>You can delete it at any time.</strong> Settings → Reset all data. Or delete the Dial app, which removes everything.</li>
+      <li><strong>It does not persist beyond your device.</strong> If you lose your phone or uninstall Dial, your data is gone. There is no backup unless you create one yourself.</li>
+    </ul>
 
-  <h2>Changes to this policy</h2>
-  <p>If we ever add features that change this (such as optional cloud sync), we will update this policy and notify you within the app before any data leaves your device.</p>
+    <h2>Children</h2>
+    <p>Dial is intended for adult and teen golfers. We do not knowingly collect data from children under 13 because we do not collect data from anyone.</p>
 
-  <h2>Contact</h2>
-  <p>Questions, concerns, or feedback: <a href="mailto:delankeane@hotmail.com">delankeane@hotmail.com</a></p>
+    <h2>Crash reports and diagnostics</h2>
+    <p>If your phone sends anonymous crash reports to Apple (a system-level setting you control in iOS Settings), Apple may share aggregated crash information with us. This data contains no personal information and is used only to fix bugs.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If we ever add features that change this (such as optional cloud sync), we will update this policy and notify you within the app before any data leaves your device.</p>
+
+    <h2>Contact</h2>
+    <p>Questions, concerns, or feedback: <a href="mailto:delankeane@hotmail.com">delankeane@hotmail.com</a></p>
+  </main>
 
   <footer>
-    <p>Dial is developed independently by Delan Keane.</p>
+    <a href="index.html">Support</a> · Dial is developed independently in Ontario, Canada.
   </footer>
+
 </body>
 </html>
